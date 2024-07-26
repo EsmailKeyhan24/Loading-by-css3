@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:#222;
+        }
+        .loading{
+            width: 70px;
+            height:70px;
+            /* border:2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loading>span{
+            display: block;
+            width:0;
+            height:20px;
+            border:2px solid red;
+            border-radius:5px;
+            margin:0 5px;
+        }
+        .loading>span:nth-of-type(1){
+            animation:loading1 .3s infinite linear alternate;
+        }
+        @keyframes loading1 {
+            0%{
+                transform:translateY(-100%);
+            }
+            50%{
+                transform:translateY(0)
+            }
+            100%{
+                transform:translateY(100%);
+            }
+        }
+        .loading>span:nth-of-type(2){
+            animation:loading2 .3s infinite linear alternate;
+        }
+        @keyframes loading2 {
+            0%{
+                transform:translateY(100%);
+            }
+            50%{
+                transform:translateY(0);
+            }
+            100%{
+                transform:translateY(-100%);
+            }
+        }
+
+        .loading>span:nth-of-type(3){
+            animation:loading3 .3s infinite linear alternate;
+        }
+        @keyframes loading3 {
+            50%{
+                transform:translateY(-100%);
+            }
+            70%{
+                transform:translateY(0);
+            }
+            100%{
+                transform:translateY(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
